@@ -44,4 +44,4 @@ if __name__=='__main__':
     print 'Begin:'+startTime
     MemberData(r'E:\Python\MayTask\taskData\money')
     EndTime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
-    print '\nEnd:'+EndTime
+    print '\nEnd:'+EndTime 
