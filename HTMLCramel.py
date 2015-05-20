@@ -39,4 +39,4 @@ if __name__=='__main__':
     startTime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()) 
     MemberData(r'E:\Python\MayTask\taskData\user')
     EndTime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
-    print 'Begin:'+startTime,'\nEnd:'+EndTime
+    print 'Begin:'+startTime,'\nEnd:'+EndTime 
