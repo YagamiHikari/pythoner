@@ -39,7 +39,7 @@ def display(excel,sheet):
         return
     str1=''
     for row in range(0,sheet.nrows):
-        for col in range(0,sheet.ncols):
+        for col in range(0,sheet.ncols): 
             if sheet.cell(row,col).value!=None:
                 str1+=str(sheet.cell(row,col).value.encode('gb2312'))+'\t'
         str1+='\n'
