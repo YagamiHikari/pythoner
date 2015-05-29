@@ -36,6 +36,7 @@ postscore ={
     'sYear':'-1',
     'function':'queryScoreStu',
     'Submit':'%C8%B7+%B6%A8',
+    #or 'Submit':r'确定',
     'flag':'unnull'
     }
 req=s.post(
