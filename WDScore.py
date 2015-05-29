@@ -37,7 +37,7 @@ postscore ={
     'function':'queryScoreStu',
     'Submit':'%C8%B7+%B6%A8',
     #or 'Submit':r'确定',
-    'flag':'unnull'
+    'flag':'unnull' 
     }
 req=s.post(
     url = 'http://gsinfo.whu.edu.cn/score/Svlt_QueryScore', #成绩
