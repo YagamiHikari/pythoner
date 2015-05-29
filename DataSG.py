@@ -26,7 +26,7 @@ def sortSum(data,key=itemgetter(0),field=itemgetter(1)):
     for k,group in groupby(data,key):
         yield k,sum(field(row) for row in group)
 
-#分组统计
+#分组统计 
 def Group(excel,col,txt):
     xlsfile=open_workbook(excel)
     sheet=xlsfile.sheet_by_index(0)
