@@ -59,4 +59,4 @@ pattern = r'<TD width="90" height="25" align="center" valign="middle">([^>]*?)</
 p = re.compile(pattern)
 score = p.findall(info)
 for i in range(len(score)):
-    print score[i][1],score[i][0],string.strip(score[i][2])
+    print score[i][1],score[i][0],string.strip(score[i][2])  
