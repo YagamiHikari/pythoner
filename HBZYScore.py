@@ -36,17 +36,21 @@ req=s.post(
     data=postdata
     )
 
+rex=r'href="xscjcx.aspx\?([^<]*)" target'
+str1=re.search(rex,req.content,re.M|re.I)
+
 obj=re.search(r'&xm=([^<]*)&',req.content,re.M|re.I)
-if obj:
+if obj and str1:
     username=obj.group(1)
+    strurl=str1.group(1)
     print '登录成功！'
 else:
     print '登录失败，请重新登录！'
     username=''
+    strurl=''
 #print req.content
 
-scoreurl='http://218.197.176.40/(4fxwaj55zvzyciqp31ngcrqq)/xscjcx.aspx?xscjcx.aspx?xh=20090701027&xm=%D5%C5%B2%AE%B3%C9&gnmkdm=N121605'
-
+scoreurl='http://218.197.176.40/%28trx14ynx5mrpawvrsckaoc45%29/xscjcx.aspx?xh='+userid#+strurl.decode('gb2312','ignore').encode('utf8')
 print scoreurl
 scoreData={
     'xh':userid,
