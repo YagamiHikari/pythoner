@@ -13,7 +13,6 @@ def login():
     ScoreUrl = r'http://gsinfo.whu.edu.cn/score/Svlt_QueryScore'
     s=requests.session()
     s.get(HomeUrl)
-    #2013201040061 19910110
     userid =raw_input("stuNo:")
     pwd =raw_input("pwd:")
     res = s.get(imgurl)
