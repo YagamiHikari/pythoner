@@ -17,6 +17,7 @@ res=s.get(imgurl)
 tempIm = cStringIO.StringIO(res.content)
 im = Image.open(tempIm)
 im.show()
+#open('vertify.jpg', 'wb').write(s.get(imgurl).content)
 yzm = raw_input("check:")
 
 postdata = {
