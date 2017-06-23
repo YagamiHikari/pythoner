@@ -1,11 +1,14 @@
-# -*- coding: utf-8 -*-
+#! /usr/bin/env python
+# coding:utf-8
+
 
 import requests
-import dataScrapyEn as DE
 import time
 
+
 def login():
-    s = requests.session()
+
+    rs = requests.session()
     header = {
             'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0",
             'Host': "www.jkscglobal.com",
@@ -25,16 +28,13 @@ def login():
         "LoginName": "admin"
     }
 
-    dataUrlPage = 'http://www.jkscglobal.com/Stockist/List/Query?page='
+    data_page = 'http://www.jkscglobal.com/Stockist/List/Query?page='
 
     for i in range(1, 50000):
 
-        dataUrl = dataUrlPage + str(i)
-
-        # 下一页
-        dataNext = s.get(dataUrl, headers=header, cookies=cookies).content
-        DE.OrderData(dataNext, 'DsitributionData1.txt')
-
+        data_url = data_page + str(i)
+        content = rs.get(data_url, headers=header, cookies=cookies).content
+        # save(content, 'DsitributionData.txt')
         print 'The '+str(i)+' page finished!'
 
 if __name__ == '__main__':
